@@ -17,7 +17,7 @@ const PROYECTOS = {
   casa: 'Construcción de casa',
   presupuesto: 'Presupuesto de obra',
   arreglos: 'Arreglos o refacciones',
-  otro: 'Mantenimiento u otro trabajo',
+  otro: 'Obra civil, metálica u otro trabajo',
 };
 
 document.documentElement.classList.add('js');
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSelector();
   initAtajosDeProyecto();
   initFormulario();
+  initVideos();
   initReveal();
   document.getElementById('year').textContent = new Date().getFullYear();
 });
@@ -232,6 +233,22 @@ function armarLinkWhatsApp(datos) {
   ];
   if (datos.mensaje && datos.mensaje.trim()) lineas.push(`Detalle: ${datos.mensaje.trim()}`);
   return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(lineas.join('\n'))}`;
+}
+
+/* ---------- Videos: el reproductor se carga recién al tocar la imagen ---------- */
+function initVideos() {
+  document.querySelectorAll('[data-video]').forEach((enlace) => {
+    enlace.addEventListener('click', (e) => {
+      e.preventDefault();
+      const iframe = document.createElement('iframe');
+      iframe.className = 'work__media';
+      iframe.src = `https://www.youtube-nocookie.com/embed/${enlace.dataset.video}?autoplay=1&rel=0`;
+      iframe.title = enlace.getAttribute('aria-label').replace('Reproducir video: ', '');
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      iframe.allowFullscreen = true;
+      enlace.replaceWith(iframe);
+    });
+  });
 }
 
 /* ---------- Aparición suave al hacer scroll ---------- */

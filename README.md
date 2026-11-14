@@ -29,7 +29,8 @@ Es un sitio estático: se sube tal cual a GitHub Pages, Netlify, Vercel o cualqu
 | Qué | Dónde |
 | --- | --- |
 | Foto o render del inicio | `index.html`, comentario `IMAGEN DEL HERO` |
-| Redes sociales | `index.html`, comentario `REDES SOCIALES` (completar enlaces y quitar `hidden`) |
+| Redes sociales | `index.html`, bloque `<div class="social">` del pie |
+| Videos y fotos de trabajos | `index.html`, sección `TRABAJOS`; las fotos están en `assets/img/` y `data-video` lleva el ID del video de YouTube |
 | Número de WhatsApp | `CONFIG.whatsapp` en `js/main.js` y los enlaces `wa.me` de `index.html` |
 | Colores y tipografías | Variables de `:root` en `css/styles.css` |
 
