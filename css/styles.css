@@ -525,7 +525,6 @@ svg:not([role="img"]) {
 .work__body p { margin-top: .4rem; font-size: .96rem; color: var(--tinta-suave); }
 
 .tips {
-  margin-top: 1.5rem;
   padding: 1.5rem;
   border-radius: var(--radio);
   background: var(--celeste-50);
@@ -938,7 +937,6 @@ svg:not([role="img"]) {
   .coverage__list { grid-template-columns: repeat(3, 1fr); }
   .services { grid-template-columns: repeat(2, 1fr); }
   .works { grid-template-columns: repeat(2, 1fr); }
-  .tips ul { grid-template-columns: repeat(2, 1fr); }
   .selector__tabs { grid-template-columns: repeat(2, 1fr); }
   .selector__panel { padding: 2.25rem; }
   .selector__panel .btn { width: auto; }
@@ -973,7 +971,7 @@ svg:not([role="img"]) {
   }
   .nav { gap: 1.5rem; }
   .nav a:not(.btn) { padding: .5rem 0; border: 0; font-size: .95rem; }
-  .works { grid-template-columns: repeat(3, 1fr); }
+  .works { grid-template-columns: 1.2fr 1fr; align-items: start; }
   .nav .btn { margin: 0; }
 
   .hero { padding: 4.5rem 0 6.5rem; }
