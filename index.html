@@ -36,7 +36,7 @@
   "image": "https://evolutivanortetuc.com/assets/og-image.png",
   "description": "Empresa constructora en Tucumán. Construcción de casas llave en mano, presupuestos de obra, refacciones, obras civiles, aberturas de aluminio y tinglados.",
   "telephone": "+5493816487967",
-  "email": "eyeconstructora@yahoo.com.ar",
+  "email": "evolutivanortetuc@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "San Miguel de Tucumán",
@@ -162,12 +162,12 @@
     <section class="hero" id="inicio">
       <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="eyebrow"><span class="eyebrow__dot"></span>Evolutiva Norte</p>
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>Evolutiva Norte · Desde 2011</p>
           <h1>Empresa constructora en Tucumán: tu casa <span class="accent">de principio a fin.</span></h1>
           <p class="lead">Construimos casas, armamos presupuestos de obra claros y resolvemos arreglos y refacciones en Yerba Buena, Tafí Viejo y San Miguel de Tucumán.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#turnos">Coordinar una reunión</a>
-            <a class="btn btn--ghost" href="#orientacion">Ver cómo te ayudamos</a>
+            <a class="btn btn--sol" href="#turnos">Coordinar una reunión <span aria-hidden="true">→</span></a>
+            <a class="btn btn--glass" href="#orientacion">Ver cómo te ayudamos</a>
           </div>
           <ul class="hero__zones" aria-label="Zona de cobertura">
             <li>Yerba Buena</li>
@@ -200,7 +200,7 @@
             <rect width="560" height="460" rx="28" fill="url(#cielo)"/>
             <rect width="560" height="460" rx="28" fill="url(#grilla)"/>
 
-            <circle cx="452" cy="92" r="34" fill="#f8c555"/>
+            <circle class="build build--sol" cx="452" cy="92" r="34" fill="#f8c555"/>
 
             <!-- Cerros -->
             <path d="M0 300 90 214l62 48 84-96 96 104 70-58 158 122v126H0z" fill="#9ed8f5"/>
@@ -210,21 +210,30 @@
             <path d="M0 372h560v60a28 28 0 0 1-28 28H28a28 28 0 0 1-28-28z" fill="#0e2a3f"/>
             <rect y="366" width="560" height="10" fill="#0a77b8"/>
 
+            <g class="build build--arbol">
             <!-- Árbol -->
             <rect x="92" y="296" width="8" height="72" rx="3" fill="#0e2a3f"/>
             <circle cx="96" cy="276" r="36" fill="#0a77b8"/>
             <circle cx="74" cy="296" r="22" fill="#0a77b8"/>
             <circle cx="120" cy="298" r="20" fill="#0a77b8"/>
+            </g>
 
+            <g class="build build--bajo">
             <!-- Casa: volumen bajo -->
             <rect x="150" y="248" width="300" height="120" fill="#fff"/>
             <rect x="150" y="240" width="300" height="10" fill="#0e2a3f"/>
+            </g>
+
+            <g class="build build--alto">
             <!-- Casa: volumen alto -->
             <rect x="250" y="150" width="230" height="100" fill="#0a77b8"/>
             <rect x="242" y="142" width="246" height="10" fill="#0e2a3f"/>
             <rect x="274" y="174" width="120" height="54" rx="3" fill="url(#vidrio)"/>
             <path d="M334 174v54M274 201h120" stroke="#fff" stroke-width="3"/>
             <rect x="416" y="174" width="42" height="54" rx="3" fill="url(#vidrio)"/>
+            </g>
+
+            <g class="build build--pb">
             <!-- Planta baja -->
             <rect x="172" y="272" width="118" height="96" rx="3" fill="url(#vidrio)"/>
             <path d="M231 272v96M172 320h118" stroke="#fff" stroke-width="3"/>
@@ -232,7 +241,9 @@
             <circle cx="355" cy="328" r="3" fill="#0e2a3f"/>
             <rect x="386" y="290" width="46" height="40" rx="3" fill="url(#vidrio)"/>
             <rect x="306" y="366" width="70" height="6" rx="2" fill="#bfe6fa"/>
+            </g>
 
+            <g class="build build--cotas">
             <!-- Cotas de plano -->
             <g stroke="#0e2a3f" stroke-width="1.5" fill="none">
               <path d="M150 404h300" stroke-dasharray="5 5"/>
@@ -244,15 +255,46 @@
               <path d="M510 142v226" stroke-dasharray="5 5"/>
               <path d="M502 142h16M502 368h16"/>
             </g>
+            </g>
           </svg>
 
           <figcaption class="hero__badge">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
             <span><strong>Obras en el Gran Tucumán</strong>Yerba Buena · Tafí Viejo · Centro</span>
           </figcaption>
+          <p class="hero__chip" aria-hidden="true"><span>Construyendo<br>desde</span><strong>2011</strong></p>
         </figure>
       </div>
+
+      <div class="container">
+        <ul class="facts">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.500 12 4l9 7.500"/><path d="M5.500 10v10h13V10"/><path d="M10 20v-5.500h4V20"/></svg>
+            <div><strong>Llave en mano</strong><span>De los cimientos a las terminaciones</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.200"/><path d="M3 20c0-3.300 2.700-6 6-6s6 2.700 6 6"/><circle cx="17" cy="9" r="2.500"/><path d="M16 14.200c2.800.200 5 2.600 5 5.800"/></svg>
+            <div><strong>Equipo profesional</strong><span>Ingeniero civil y arquitectos</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8.500 7.500h7M8.500 12h2M13.500 12h2M8.500 16h2M13.500 16h2"/></svg>
+            <div><strong>Presupuestos claros</strong><span>Detallados por rubro y etapa</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.500" y="5" width="17" height="15" rx="2.500"/><path d="M8 3v4M16 3v4M3.500 10h17"/><path d="m9 15 2 2 4-4"/></svg>
+            <div><strong>Sin compromiso</strong><span>Primera reunión para conocer tu proyecto</span></div>
+          </li>
+        </ul>
+      </div>
     </section>
+
+    <!-- Cinta de servicios en movimiento (decorativa) -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Construcción de casas</span><span>Presupuestos de obra</span><span>Refacciones</span><span>Aberturas de aluminio</span><span>Tinglados</span><span>Dirección de obra</span><span>Yerba Buena</span><span>Tafí Viejo</span><span>San Miguel de Tucumán</span>
+        <span>Construcción de casas</span><span>Presupuestos de obra</span><span>Refacciones</span><span>Aberturas de aluminio</span><span>Tinglados</span><span>Dirección de obra</span><span>Yerba Buena</span><span>Tafí Viejo</span><span>San Miguel de Tucumán</span>
+      </div>
+    </div>
 
     <!-- ===================== QUIÉNES SOMOS ===================== -->
     <section class="section" id="nosotros">
@@ -617,12 +659,12 @@
             <span class="contact__cta">Llamar →</span>
           </a>
 
-          <a class="contact__card reveal" href="mailto:eyeconstructora@yahoo.com.ar?subject=Consulta%20desde%20la%20web">
+          <a class="contact__card reveal" href="mailto:evolutivanortetuc@gmail.com?subject=Consulta%20desde%20la%20web">
             <span class="contact__icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.500 7 8.500 6 8.500-6"/></svg>
             </span>
             <span class="contact__label">Email</span>
-            <strong>eyeconstructora@yahoo.com.ar</strong>
+            <strong>evolutivanortetuc@gmail.com</strong>
             <span class="contact__cta">Escribir →</span>
           </a>
         </div>
@@ -669,7 +711,7 @@
         <h4>Contacto</h4>
         <ul>
           <li><a href="https://wa.me/5493816487967" target="_blank" rel="noopener">+54 9 3816 48-7967</a></li>
-          <li><a href="mailto:eyeconstructora@yahoo.com.ar">eyeconstructora@yahoo.com.ar</a></li>
+          <li><a href="mailto:evolutivanortetuc@gmail.com">evolutivanortetuc@gmail.com</a></li>
         </ul>
         <div class="social">
           <a href="https://www.facebook.com/eyeconstructora/" target="_blank" rel="noopener" aria-label="Facebook">
