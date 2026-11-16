@@ -30,7 +30,7 @@ Es un sitio estático: se sube tal cual a GitHub Pages, Netlify, Vercel o cualqu
 | --- | --- |
 | Foto o render del inicio | `index.html`, comentario `IMAGEN DEL HERO` |
 | Redes sociales | No hay enlaces por ahora; se agregan en el pie de `index.html` |
-| Videos y fotos de trabajos | `index.html`, sección `TRABAJOS`; las fotos están en `assets/img/` y `data-video` lleva el ID del video de YouTube |
+| Fotos de trabajos | `index.html`, sección `TRABAJOS`; las fotos están en `assets/img/pinar-2/` |
 | Número de WhatsApp | `CONFIG.whatsapp` en `js/main.js` y los enlaces `wa.me` de `index.html` |
 | Colores y tipografías | Variables de `:root` en `css/styles.css` |
 

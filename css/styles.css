@@ -1249,7 +1249,7 @@ svg:not([role="img"]) {
 }
 
 /* ---------- Proyecto con galería de fotos ---------- */
-.project { margin-bottom: 3rem; }
+.project { margin-bottom: 0; }
 .project__head { display: grid; gap: .9rem; margin-bottom: 1.5rem; }
 .project__head h3 { font-size: clamp(1.5rem, 4.500vw, 2rem); }
 .project__head > p { color: var(--tinta-suave); max-width: 34rem; }
@@ -1345,7 +1345,6 @@ svg:not([role="img"]) {
 .lightbox__next { right: .5rem; top: 50%; transform: translateY(-50%); }
 
 @media (min-width: 960px) {
-  .project { margin-bottom: 4rem; }
   .project__head { grid-template-columns: 1fr 1fr; align-items: end; gap: 3rem; margin-bottom: 2rem; }
   .gallery { grid-template-columns: repeat(4, 1fr); gap: .9rem; }
   .gallery__item--big { grid-row: span 2; aspect-ratio: auto; }
