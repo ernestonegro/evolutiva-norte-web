@@ -176,17 +176,91 @@
           </ul>
         </div>
 
-        <!-- Foto del inicio: para cambiarla, reemplazá los archivos o las rutas del <img> -->
+        <!--
+          IMAGEN DEL HERO
+          Para usar una foto real o un render, reemplazá el <svg> de abajo por:
+          <img src="assets/img/proyecto-hero.jpg" alt="Construcción de vivienda llave en mano en Yerba Buena, Tucumán" width="1120" height="920" fetchpriority="high">
+        -->
         <figure class="hero__visual">
-          <img src="assets/img/pinar-2/pinar-2-tafi-viejo-01-1400.jpg"
-               srcset="assets/img/pinar-2/pinar-2-tafi-viejo-01-700.jpg 700w, assets/img/pinar-2/pinar-2-tafi-viejo-01-1400.jpg 1400w"
-               sizes="(min-width: 960px) 560px, 100vw"
-               alt="Casa de dos plantas con frente de ladrillo visto construida por Evolutiva Norte en Tafí Viejo, Tucumán"
-               width="1400" height="788" fetchpriority="high">
+          <svg viewBox="0 0 560 460" role="img" aria-label="Casa moderna construida en Tucumán, con los cerros de fondo">
+            <defs>
+              <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#bfe6fa"/>
+                <stop offset="1" stop-color="#f3fafe"/>
+              </linearGradient>
+              <linearGradient id="vidrio" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#8fd3f7"/>
+                <stop offset="1" stop-color="#2ba3e0"/>
+              </linearGradient>
+              <pattern id="grilla" width="28" height="28" patternUnits="userSpaceOnUse">
+                <path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1"/>
+              </pattern>
+            </defs>
+
+            <rect width="560" height="460" rx="28" fill="url(#cielo)"/>
+            <rect width="560" height="460" rx="28" fill="url(#grilla)"/>
+
+            <circle class="build build--sol" cx="452" cy="92" r="34" fill="#f8c555"/>
+
+            <!-- Cerros -->
+            <path d="M0 300 90 214l62 48 84-96 96 104 70-58 158 122v126H0z" fill="#9ed8f5"/>
+            <path d="M0 338 120 262l88 62 104-70 110 66 138-52v192H0z" fill="#6dc0ec"/>
+
+            <!-- Terreno -->
+            <path d="M0 372h560v60a28 28 0 0 1-28 28H28a28 28 0 0 1-28-28z" fill="#0e2a3f"/>
+            <rect y="366" width="560" height="10" fill="#0a77b8"/>
+
+            <g class="build build--arbol">
+            <!-- Árbol -->
+            <rect x="92" y="296" width="8" height="72" rx="3" fill="#0e2a3f"/>
+            <circle cx="96" cy="276" r="36" fill="#0a77b8"/>
+            <circle cx="74" cy="296" r="22" fill="#0a77b8"/>
+            <circle cx="120" cy="298" r="20" fill="#0a77b8"/>
+            </g>
+
+            <g class="build build--bajo">
+            <!-- Casa: volumen bajo -->
+            <rect x="150" y="248" width="300" height="120" fill="#fff"/>
+            <rect x="150" y="240" width="300" height="10" fill="#0e2a3f"/>
+            </g>
+
+            <g class="build build--alto">
+            <!-- Casa: volumen alto -->
+            <rect x="250" y="150" width="230" height="100" fill="#0a77b8"/>
+            <rect x="242" y="142" width="246" height="10" fill="#0e2a3f"/>
+            <rect x="274" y="174" width="120" height="54" rx="3" fill="url(#vidrio)"/>
+            <path d="M334 174v54M274 201h120" stroke="#fff" stroke-width="3"/>
+            <rect x="416" y="174" width="42" height="54" rx="3" fill="url(#vidrio)"/>
+            </g>
+
+            <g class="build build--pb">
+            <!-- Planta baja -->
+            <rect x="172" y="272" width="118" height="96" rx="3" fill="url(#vidrio)"/>
+            <path d="M231 272v96M172 320h118" stroke="#fff" stroke-width="3"/>
+            <rect x="318" y="282" width="46" height="86" rx="3" fill="#d79a5b"/>
+            <circle cx="355" cy="328" r="3" fill="#0e2a3f"/>
+            <rect x="386" y="290" width="46" height="40" rx="3" fill="url(#vidrio)"/>
+            <rect x="306" y="366" width="70" height="6" rx="2" fill="#bfe6fa"/>
+            </g>
+
+            <g class="build build--cotas">
+            <!-- Cotas de plano -->
+            <g stroke="#0e2a3f" stroke-width="1.5" fill="none">
+              <path d="M150 404h300" stroke-dasharray="5 5"/>
+              <path d="M150 396v16M450 396v16"/>
+            </g>
+            <rect x="268" y="392" width="64" height="24" rx="12" fill="#fff"/>
+            <text x="300" y="409" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#0e2a3f">12,00 m</text>
+            <g stroke="#0e2a3f" stroke-width="1.5" fill="none">
+              <path d="M510 142v226" stroke-dasharray="5 5"/>
+              <path d="M502 142h16M502 368h16"/>
+            </g>
+            </g>
+          </svg>
 
           <figcaption class="hero__badge">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-            <span><strong>Obra en Pinar 2</strong>Av. Constitución · Tafí Viejo</span>
+            <span><strong>Obras en el Gran Tucumán</strong>Yerba Buena · Tafí Viejo · Centro</span>
           </figcaption>
           <p class="hero__chip" aria-hidden="true"><span>Construyendo<br>desde</span><strong>2011</strong></p>
         </figure>
