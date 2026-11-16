@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAtajosDeProyecto();
   initFormulario();
   initVideos();
+  initGaleria();
   initReveal();
   document.getElementById('year').textContent = new Date().getFullYear();
 });
@@ -248,6 +249,55 @@ function initVideos() {
       iframe.allowFullscreen = true;
       enlace.replaceWith(iframe);
     });
+  });
+}
+
+/* ---------- Galería: visor de fotos a pantalla completa ---------- */
+function initGaleria() {
+  const visor = document.getElementById('lightbox');
+  const fotos = Array.from(document.querySelectorAll('[data-lightbox]'));
+  if (!visor || !fotos.length || typeof visor.showModal !== 'function') return;
+
+  const imagen = document.getElementById('lightbox-img');
+  const pie = document.getElementById('lightbox-caption');
+  let actual = 0;
+
+  const mostrar = (i) => {
+    actual = (i + fotos.length) % fotos.length;
+    const alt = fotos[actual].querySelector('img').alt;
+    imagen.src = fotos[actual].href;
+    imagen.alt = alt;
+    pie.textContent = `${alt} (${actual + 1} de ${fotos.length})`;
+  };
+
+  fotos.forEach((foto, i) => {
+    foto.addEventListener('click', (e) => {
+      e.preventDefault();
+      mostrar(i);
+      visor.showModal();
+    });
+  });
+
+  visor.addEventListener('click', (e) => {
+    const accion = e.target.closest('[data-accion]')?.dataset.accion;
+    if (accion === 'anterior') mostrar(actual - 1);
+    else if (accion === 'siguiente') mostrar(actual + 1);
+    else if (accion === 'cerrar' || e.target === visor) visor.close();
+  });
+
+  visor.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') mostrar(actual - 1);
+    if (e.key === 'ArrowRight') mostrar(actual + 1);
+  });
+
+  // Deslizar con el dedo para cambiar de foto
+  let inicioX = null;
+  visor.addEventListener('touchstart', (e) => { inicioX = e.touches[0].clientX; }, { passive: true });
+  visor.addEventListener('touchend', (e) => {
+    if (inicioX === null) return;
+    const dx = e.changedTouches[0].clientX - inicioX;
+    if (Math.abs(dx) > 50) mostrar(actual + (dx < 0 ? 1 : -1));
+    inicioX = null;
   });
 }
 
