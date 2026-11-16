@@ -1353,3 +1353,9 @@ svg:not([role="img"]) {
   .lightbox__prev { left: 1.25rem; }
   .lightbox__next { right: 1.25rem; }
 }
+
+/* Foto del inicio */
+.hero__visual > img { aspect-ratio: 4 / 3; object-fit: cover; object-position: 35% 50%; }
+@media (min-width: 960px) {
+  .hero__visual > img { aspect-ratio: 5 / 4; }
+}
