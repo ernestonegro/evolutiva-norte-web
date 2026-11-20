@@ -22,7 +22,14 @@ python3 -m http.server 8000
 
 ## Publicarlo
 
-Es un sitio estático: se sube tal cual a GitHub Pages, Netlify, Vercel o cualquier hosting.
+Es un sitio estático, sin paso de compilación. Está preparado para **Cloudflare Pages**:
+
+1. En Cloudflare: **Workers & Pages** → **Create** → **Pages** → **Connect to Git** y elegí este repositorio.
+2. **Production branch:** `main`.
+3. **Framework preset:** `None`. **Build command:** vacío. **Build output directory:** `/`.
+4. Para el dominio: en el proyecto, **Custom domains** → **Set up a custom domain** → `evolutivanortetuc.com` (y `www.evolutivanortetuc.com`).
+
+`_headers` agrega cabeceras de seguridad y caché en Cloudflare. El archivo `CNAME` solo lo usa GitHub Pages; en Cloudflare se ignora.
 
 ## Qué personalizar
 
